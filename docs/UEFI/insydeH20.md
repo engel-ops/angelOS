@@ -1,4 +1,4 @@
-# InsydeH20 Setup Utility
+# InsydeH2O Setup Utility (from Rev. 5.0)
 
 ## Main
 

@@ -1,6 +1,6 @@
 # UEFI Recommendations
 
-## InsydeH20
+## InsydeH2O (from Rev. 5.0)
 
 | Option | Setting | Why |
 :------- | :------ | :--
