@@ -99,3 +99,25 @@ This DOES not prevent the system from booting systems installed on HDDs BUT prev
 
 Interface for CMOS (complementary metal oxide semiconductor) image sensor which convert light to digital signals making them readable by the OS displaying these signals as pictures or videos. [[17](https://www.tel.com/museum/exhibition/principle/cmos.html)]
 
+### Security Boot Management
+
+#### Enforce Secure Boot
+
+> When a PC starts, it first finds the OS bootloader. PCs without Secure Boot run whatever bootloader is on the PC's hard drive. There's no way for the PC to tell whether it's a trusted OS or a rootkit.
+> 
+> When a PC equipped with UEFI starts, the PC first verifies that the firmware is digitally signed, reducing the risk of firmware rootkits. If Secure Boot is enabled, the firmware examines the bootloader's digital signature to verify that it hasn't been modified. If the bootloader is intact, the firmware starts the bootloader only if one of the following conditions is true:
+> - The bootloader was signed using a trusted certificate. For PCs certified for Windows, the Microsoft certificate is trusted.
+> - The user has manually approved the bootloader's digital signature. This action allows the user to load non-Microsoft operating systems. 
+> [[18](https://learn.microsoft.com/en-us/windows/security/information-protection/secure-the-windows-10-boot-process#secure-boot)]
+
+## Boot
+
+### PXE Boot
+
+> Preboot execution environment (PXE), pronounced pixie, is a set of standards that enables a computer to load an operating system (OS) over a network connection. PXE can be used to quickly install an OS and is commonly used for both servers and clients. It may also be called PXE boot, boot from network, network boot or local area network boot.
+> 
+> Here are the steps in the PXE boot process:
+> 1. The client basic input/output system (BIOS) initiates PXE boot. This may be selected by the client operator or may be a fallback option when other boot media fails.
+> 2. The client broadcasts a DHCP request and a PXE request.
+> 3. The DHCP server responds with the DHCP response so the client can set an IP address, and it replies with the IP address of the TFTP server and the file name of the NBP.
+> 4. The client downloads and boots the NBP.
